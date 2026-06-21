@@ -1,0 +1,19 @@
+{
+  "name": "search-typeahead-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Search Typeahead System — distributed-cache backend (consistent hashing), trending searches, batch writes, and a React UI.",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run start --prefix backend",
+    "benchmark": "npm run benchmark --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
